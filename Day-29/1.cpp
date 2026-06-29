@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    float a, b;
+
+    cout << "1.Add 2.Subtract 3.Multiply 4.Divide\n";
+    cin >> choice;
+    cin >> a >> b;
+
+    switch(choice) {
+        case 1: cout << a + b; break;
+        case 2: cout << a - b; break;
+        case 3: cout << a * b; break;
+        case 4: 
+            if(b != 0)
+                cout << a / b;
+            else
+                cout << "Division by zero not allowed";
+            break;
+        default: cout << "Invalid Choice";
+    }
+}
